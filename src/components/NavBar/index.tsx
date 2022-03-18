@@ -9,6 +9,7 @@ import DEVIC_ESIZE from '../../constants/screenSize';
 import styles from './menuStyles';
 
 const Container = styled.div`
+  width: 90%;
   ${tw`
     flex
     h-20
@@ -27,10 +28,11 @@ const NavItems = tw.ul`
   list-none
   w-full
   h-auto
+  lg:w-auto
   lg:h-full
   flex
   lg:ml-20
-  justify-center
+  justify-evenly
   items-center
 `;
 
@@ -44,10 +46,10 @@ const NavItem = tw.ul`
   cursor-pointer
   font-medium
   text-lg
-  lg: text-base
+  lg:text-base
   transition-colors
   transition-duration[300ms]
-  hover:text-gray-300
+  hover:text-gray-200
   box-content
   mb-2
   lg:mb-0
