@@ -92,28 +92,28 @@ const OutlinedTextSvg = styled.svg`
 
 const DescriptionText = styled.p`
   ${tw`
-    text-xl
-    lg:text-lg
-    text-white
-    text-opacity-80
-    mt-10
-    max-w-sm
-    lg:max-w-lg
-    2xl:max-w-xl
+      text-xl
+      lg:text-lg
+      text-white
+      text-opacity-80
+      mt-10
+      max-w-xs
+      lg:max-w-lg
+      2xl:max-w-xl
   `}
 `;
 
 const ViewMoreButton = styled.button`
   ${tw`
-    absolute
-    bottom-4
-    left-1/2
-    -translate-x-1/2
-    text-white
-    text-4xl
-    transition-colors
-    duration-200
-    hover:text-green-400
+      absolute
+      bottom-4
+      left-1/2
+      -translate-x-1/2
+      text-white
+      text-4xl
+      transition-colors
+      duration-200
+      hover:text-green-400
   `}
 `
 
@@ -132,7 +132,8 @@ const TopSection = () => {
           </FloatingText>
           <FloatingText>INDONESIA.</FloatingText>
           <DescriptionText>
-            Let's explore of the third largest countries in the world, namely indonesia. Enjoy 3 vacation packages at competitive prices and strong soul.
+            Let's explore of the third largest countries in the world,
+            namely indonesia. Enjoy 3 vacation packages at competitive prices and strong soul.
           </DescriptionText>
         </InfoSection>
         <ViewMoreButton>

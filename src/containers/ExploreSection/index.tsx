@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Element } from "react-scroll";
-import TopSection from "../TopSection";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import BaliTempleImg from "../../images/bali-temple.jpg";
+import RiceTerraceImg from "../../images/rice-terrace.jpg";
+import ExoticBromoImg from "../../images/exotic-bromo.jpg";
+import MaleMaldivesImg from "../../images/male-maldives.jpg";
+import IceTeaImg from "../../images/ice-tea.jpg";
 
 const ExploreSectionContainer = tw(Element)`
   w-full
@@ -17,9 +24,11 @@ const ExploreSectionContainer = tw(Element)`
 `;
 
 const Title = tw.h1`
-  text-2xl
+  text-3xl
   xl:text-3xl
   2xl:text-5xl
+  mt-6
+  lg:mt-0
   2xl:mt-6
   2xl:mb-6
   text-gray-800
@@ -32,10 +41,14 @@ const SectionInfo = tw.p`
   2xl:text-lg
   text-gray-700
   text-center
-  mt-4
+  mt-8
   2xl:mt-2
   max-w-lg
   xl:max-w-3xl
+  pl-4
+  pr-4
+  lg:pl-2
+  lg:pr-2
 `;
 
 const ExplorerSectionWrapper = tw.div`
@@ -49,8 +62,8 @@ const ExplorerSectionWrapper = tw.div`
   xl:mt-6
   2xl:mt-10
   max-w-sm
-  xl:max-w-3xl
-  2xl:max-w-5xl
+  xl:max-w-2xl
+  2xl:max-w-4xl
 `;
 
 const Item = styled.div`
@@ -87,6 +100,36 @@ const ExploreSection = () => {
   return (
     <ExploreSectionContainer name="Explore">
       <Title>Explore Travel Places</Title>
+      <SectionInfo>
+        View our tour package and find out more about the places we will visit
+        together on this journey to the beautifull of indonesia, exploring so
+        many historical and amazing locations with the group and having so much
+        fun.
+      </SectionInfo>
+      <ExplorerSectionWrapper>
+        <Carousel dynamicHeight={false}>
+          <Item>
+            <img src={BaliTempleImg} />
+            <Description>Bali Temple</Description>
+          </Item>
+          <Item>
+            <img src={RiceTerraceImg} />
+            <Description>Rice Terrace</Description>
+          </Item>
+          <Item>
+            <img src={ExoticBromoImg} />
+            <Description>Exotic Bromo</Description>
+          </Item>
+          <Item>
+            <img src={MaleMaldivesImg} />
+            <Description>Male Maldives</Description>
+          </Item>
+          <Item>
+            <img src={IceTeaImg} />
+            <Description>Ice Tea</Description>
+          </Item>
+        </Carousel>
+      </ExplorerSectionWrapper>
     </ExploreSectionContainer>
   )
 }
